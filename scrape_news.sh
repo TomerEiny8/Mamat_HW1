@@ -34,5 +34,5 @@ for article_url in "${article_urls[@]}"; do
 		echo "$output"
 	fi
 done
-truncate -s -1 /dev/stdout
+
 
