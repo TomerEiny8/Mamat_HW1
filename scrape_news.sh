@@ -3,11 +3,11 @@
 # the main site that we get the information from
 site="https://www.ynetnews.com/category/3082"
 
-# the names that we search in the articles
+# the names that we search in the articlesהןצ
 names=("Netanyahu" "Gantz" "Bennett" "Peretz")
 
 # putting all the article urls in an array, and then sorting them to see that then is no duplication
-readarray -t article_urls < <(wget -qO - "$site" | grep -Eo "https://www.ynetnews.com/article/[0-9a-zA-Z]{9}" | sort -u)
+readarray -t article_urls < <(wget -qO - "$site" | grep -Eo "https://www.ynetnews.com/article/[0-9a-zA-Z]+" | sort -u)
 
 # printing the total number of articles
 echo "${#article_urls[@]}"
