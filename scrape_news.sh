@@ -10,7 +10,7 @@ names=("Netanyahu" "Gantz" "Bennett" "Peretz")
 readarray -t article_urls < <(wget -qO - "$site" | grep -Eo "https://www.ynetnews.com/article/[0-9a-zA-Z]+" | sort -u)
 
 # printing the total number of articles
-echo "${#article_urls[@]}"
+#echo "${#article_urls[@]}"
 
 # going over each article and printing each one with the numbers of names
 for article_url in "${article_urls[@]}"; do
