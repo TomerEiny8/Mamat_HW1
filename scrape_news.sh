@@ -20,7 +20,7 @@ for article_url in "${article_urls[@]}"; do
 	
 	# in each article going over every name, to see how many times appears
 	for name in "${names[@]}"; do
-		count=$(echo "$article" | grep -o -i "$name" | wc -l)
+		count=$(echo "$article" | grep -o "$name" | wc -l)
 		output+=", $name, $count"
 		# if we found any name, we need to print them all
 		if [ "$count" -gt 0 ]; then
